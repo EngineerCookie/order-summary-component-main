@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    /*Variables*/
+    --font-default:'Red Hat Display', sans-serif;
+    /* Primary Color*/
+    --color-main-bluePale: hsl(225, 100%, 94%);
+    --color-main-blueBrigth: hsl(245, 75%, 52%);
+    /*Neutral Color*/
+    --color-aux-bluePale: hsl(225, 100%, 98%);
+    --color-aux-blueDesat: hsl(224, 23%, 55%);
+    --color-aux-blueDark: hsl(223, 47%, 23%);
+    --color-aux-white: white;
+    --color-active-bluePale: hsl(245, 97%, 72%);
+    /*Decoration*/
+
+}
+
+/*Utiliy classes START*/
+.flex {display: flex;}
+.flexcol {flex-direction: column;}
+.flexrow {flex-direction: row;}
+.no-margin {margin: 0;}
+.btn {
+    background: none;
+    border: none;
+    font-family: var(--font-default);
+    font-weight: 700;
+    font-size: 1rem;
+}
+.btn:hover {cursor: pointer;}
+
+.flexcenter {
+    justify-content: center;
+    align-items: center;
+}
+
+.flextop-center {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexspace-center{
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Utility classes END*/
+
+body {
+    font-family: var(--font-default);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-main-bluePale);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.item-container {
+    border-radius: 20px;
+    background-color: var(--color-aux-white);
+    width: 90vw;
+    height: 80vh;
+    max-width: 450px;
+    max-height: 700px;
+}
+
+.item-container > img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+
+.summary {
+    padding: clamp(5%, 2rem, 2.5rem) min(5%, 2.5rem, 3rem); /*PLACEHOLDER*/
+    gap: 1rem;
+    height: 100%;
+}
+.summary > h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-aux-blueDark);
+}
+
+.summary > p {
+    font-weight: 500;
+    color: var(--color-aux-blueDesat);
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.plan-summary {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--color-aux-bluePale);
+    border-radius: 15px;
+}
+
+.plan-info {
+    width: 65%;
+    padding: 1rem 0
+}
+
+.plan-info > img {
+    width: 4rem;
+    height: auto;
+    padding-right: 1rem;
+}
+
+.plan-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-aux-blueDark);
+}
+
+.plan-price {
+    color: var(--color-aux-blueDesat);
+}
+/*Buttons*/
+#plan-change {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: var(--color-main-blueBrigth);
+}
+
+#plan-change:hover {
+    text-decoration: none;
+    color: var(--color-active-bluePale);
+}
+
+#to-payment {
+    width: 100%;
+    color: var(--color-aux-white);
+    background-color: var(--color-main-blueBrigth);
+    padding: 1rem 0;
+    border-radius: 15px;
+    box-shadow: 0px 11px 40px -15px var(--color-main-blueBrigth);
+}
+
+#to-payment:hover {
+    background-color: var(--color-active-bluePale);
+    box-shadow: 0px 11px 40px -15px var(--color-active-bluePale);
+
+}
+
+#cancel {
+    color: var(--color-aux-blueDesat);
+    font-weight: 900;
+}
+
+#cancel:hover {
+    color: var(--color-aux-blueDark);
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 1rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 850px) {
+    body {
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+}
